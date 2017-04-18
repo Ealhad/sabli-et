@@ -24,7 +24,6 @@
       <button @click="decChrono">-</button>
       <input type="number" min="0" v-model="temps"/>
       <button @click="incChrono">+</button>
-      <button @click="majChrono(temps)">régler</button>
     </div>
     <footer>
       <p>
@@ -43,17 +42,15 @@ export default {
   name: 'controller',
   data () {
     return {
-      temps: 60,
+      temps: this.$store.state.time,
     }
   },
   methods: {
     incChrono () {
       this.temps = parseInt(this.temps) + 1
-      this.majChrono(this.temps)
     },
     decChrono () {
       this.temps -= 1
-      this.majChrono(this.temps)
     },
     majChrono (temps) {
         this.$store.commit('majChrono', temps)
@@ -62,7 +59,11 @@ export default {
       window.open('#/view')
     },
   },
-  
+  watch: {
+    temps (temps) {
+      this.majChrono(temps)
+    },
+  },
 }
 </script>
 

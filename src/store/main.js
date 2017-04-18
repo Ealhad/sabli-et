@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    time: 0,
+    time: 60,
   },
   mutations : {
     majChrono (state, time) {
