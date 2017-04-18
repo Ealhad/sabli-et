@@ -70,6 +70,9 @@ export default {
 <style scoped>
 input {
   appearance: textfield;
+  width: 50px;
+  text-align: center;
+  height: 1.8em;
 }
 
 header {
@@ -83,6 +86,19 @@ img {
   grid-area: 1 / 2 / 3 / 2;
   align-self: center;
 }
+
+button {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  height: 1.8em;
+  background-color: transparent;
+  outline: none;
+}
+
+button:hover { border-color: #999; }
+button:active { border-color: #777; }
 
 footer {
   position: absolute;
