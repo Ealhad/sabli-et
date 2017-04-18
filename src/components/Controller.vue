@@ -5,7 +5,7 @@
         sabli-et
       </h1>
       <p>
-        Ceci est un splendide (faux) chrono. Passez <a href="http://article17.picdeballmer.science/p/sabli-et">ici</a> si vous avez des choses à dire.
+        Ceci est un splendide (faux) chrono. Passez <a target="_blank" href="http://article17.picdeballmer.science/p/sabli-et">ici</a> si vous avez des choses à dire.
       </p>
       <img src="sabli-et.png"/>
     </header>
@@ -27,10 +27,10 @@
     </div>
     <footer>
       <p>
-        Fait avec ♥ et <a href="https://vuejs.org/">Vue.js</a>
+        Fait avec ♥ et <a target="_blank" href="https://vuejs.org/">Vue.js</a>
       </p>
       <p>
-        © Copyright 2017 Charles de Lacombe — code sur <a href="https://github.com/Ealhad/sabli-et/tree/master">Github</a>
+        © Copyright 2017 Charles de Lacombe — code sur <a target="_blank" href="https://github.com/Ealhad/sabli-et/tree/master">Github</a>
       </p>
     </footer>
   </main>
