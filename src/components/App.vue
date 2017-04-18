@@ -13,5 +13,7 @@ export default {
 <style>
 html {
   font-size: large;
+  background-color: #fafafa;
+  color: #121212;
 }
 </style>
