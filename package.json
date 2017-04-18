@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "sabli-et",
+  "description": "Comme un chrono, mais en fait pas vraiment.",
+  "version": "0.0.0",
+  "repository": {},
+  "scripts": {
+    "test": "echo lol",
+    "lint": "vbuild --eslint",
+    "dev": "vbuild -d",
+    "build": "vbuild"
+  },
+  "devDependencies": {
+    "vbuild": "^6.0.0"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "vue-router": "^2.4.0",
+    "vuex": "^2.3.1",
+    "vuex-shared-mutations": "^0.0.3"
+  }
+}
