@@ -9,8 +9,9 @@ module.exports = options => ({
   ],
   webpack(config) {
     config.resolve.modules.push(path.resolve('src'))
-    
-
+    if (!options.dev) {
+      config.output.publicPath = '/sabli-et/'
+    }
     return config
   }
 })
