@@ -8,7 +8,8 @@
     "test": "echo lol",
     "lint": "vbuild --eslint",
     "dev": "vbuild -d",
-    "build": "vbuild"
+    "build": "vbuild",
+    "deploy": "cd dist && git add --all && git commit --no-edit --amend && git push --force"
   },
   "devDependencies": {
     "vbuild": "^6.0.0"
