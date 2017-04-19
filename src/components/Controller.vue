@@ -53,6 +53,9 @@ export default {
         return this.$store.state.fontSize
       },
       set (size) {
+        if (size < 0.2) {
+          size = 0.2
+        }
         this.$store.commit('setSize', size)
       }
     },
@@ -61,6 +64,9 @@ export default {
         return this.$store.state.time
       },
       set (temps) {
+        if (temps < 0) {
+          temps = 0
+        }
         this.$store.commit('majChrono', temps)
       },
     },
