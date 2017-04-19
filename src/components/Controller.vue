@@ -19,7 +19,7 @@
     <hr>
     <div>
       <p>
-        Et là, c’est le temps en minutes. Pas trop compliqué ? 😉
+        Et là, c’est le temps en minutes. Pas trop compliqué ?<span class="rotate">😉</span>
       </p>
       <button @click="temps -= 1">-</button>
       <input id="temps" type="number" min="0" v-model="temps"/>
@@ -94,14 +94,33 @@ input {
 
 header {
   display: grid;
-  grid: auto / auto 200px;
+  grid: auto / auto 250px;
 }
 
 img {
   height: 200px;
-  width: 200px;
   grid-area: 1 / 2 / 3 / 2;
   align-self: center;
+  justify-self: center;
+  transition: all ease-in-out 0.3s;
+}
+
+img:hover {
+  height: 260px;
+}
+
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+
+.rotate {
+  transition: all ease-in-out 0.3s;
+  display: inline-block;
+}
+
+.rotate:hover {
+  font-size: 4em;
+  animation: 1s rotate infinite linear;
 }
 
 button {
