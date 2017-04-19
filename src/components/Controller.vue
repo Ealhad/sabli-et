@@ -47,11 +47,6 @@
 
 export default {
   name: 'controller',
-  data () {
-    return {
-      temps: this.$store.state.time,
-    }
-  },
   computed: {
     fontSize: {
       get () {
@@ -61,6 +56,14 @@ export default {
         this.$store.commit('setSize', size)
       }
     },
+    temps: {
+      get () {
+        return this.$store.state.time
+      },
+      set (temps) {
+        this.$store.commit('majChrono', temps)
+      },
+    },
   },
   methods: {
     incChrono () {
@@ -69,16 +72,8 @@ export default {
     decChrono () {
       this.temps -= 1
     },
-    majChrono (temps) {
-        this.$store.commit('majChrono', temps)
-    },
     open () {
       window.open('#/view')
-    },
-  },
-  watch: {
-    temps (temps) {
-      this.majChrono(temps)
     },
   },
 }
