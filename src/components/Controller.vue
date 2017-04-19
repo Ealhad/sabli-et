@@ -21,9 +21,9 @@
       <p>
         Et là, c’est le temps en minutes. Pas trop compliqué ? 😉
       </p>
-      <button @click="decChrono">-</button>
+      <button @click="temps -= 1">-</button>
       <input id="temps" type="number" min="0" v-model="temps"/>
-      <button @click="incChrono">+</button>
+      <button @click="temps += 1">+</button>
     </div>
     <hr>
     <div>
@@ -64,6 +64,7 @@ export default {
         return this.$store.state.time
       },
       set (temps) {
+        temps = parseInt(temps)
         if (temps < 0) {
           temps = 0
         }
@@ -72,12 +73,6 @@ export default {
     },
   },
   methods: {
-    incChrono () {
-      this.temps = parseInt(this.temps) + 1
-    },
-    decChrono () {
-      this.temps -= 1
-    },
     open () {
       window.open('#/view')
     },
