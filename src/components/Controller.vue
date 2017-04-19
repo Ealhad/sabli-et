@@ -22,8 +22,15 @@
         Et là, c’est le temps en minutes. Pas trop compliqué ? 😉
       </p>
       <button @click="decChrono">-</button>
-      <input type="number" min="0" v-model="temps"/>
+      <input id="temps" type="number" min="0" v-model="temps"/>
       <button @click="incChrono">+</button>
+    </div>
+    <hr>
+    <div>
+      <input type="number" min="0.2" step="0.2" v-model="fontSize"/>
+      <label>
+        Taille du texte
+      </label>
     </div>
     <footer>
       <p>
@@ -44,6 +51,16 @@ export default {
     return {
       temps: this.$store.state.time,
     }
+  },
+  computed: {
+    fontSize: {
+      get () {
+        return this.$store.state.fontSize
+      },
+      set (size) {
+        this.$store.commit('setSize', size)
+      }
+    },
   },
   methods: {
     incChrono () {
@@ -69,11 +86,15 @@ export default {
 
 <style scoped>
 input {
-  appearance: textfield;
   width: 50px;
   text-align: center;
   height: 1.8em;
 }
+
+#temps {
+  appearance: textfield;
+}
+
 
 header {
   display: grid;

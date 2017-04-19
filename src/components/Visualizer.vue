@@ -1,7 +1,7 @@
 <template>
   <main>
-    <div id="temps">
-      {{ temps.minutes }} : {{ temps.secondes }}
+    <div id="temps" :style="{fontSize: fontSize}">
+      {{ temps.minutes }}:{{ temps.secondes }}
     </div>
   </main>
 </template>
@@ -23,7 +23,10 @@ export default {
   computed: {
     temps () {
       return humanTime(this.$store.state.time)
-    }
+    },
+    fontSize () {
+      return this.$store.state.fontSize + 'em'
+    },
   }
 }
 </script>
@@ -45,7 +48,7 @@ main {
 }
 
 #temps {
-  font: 4em bold sans-serif;
+  font-family: bold sans-serif;
   text-shadow: 0 0 3px white;
 }
 
