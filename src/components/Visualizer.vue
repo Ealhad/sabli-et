@@ -1,28 +1,17 @@
 <template>
   <main>
     <div id="temps" :style="{fontSize: fontSize}">
-      {{ temps.minutes }}:{{ temps.secondes }}
+      {{ temps }}
     </div>
   </main>
 </template>
 
 <script>
 
-const pad = number => ('00' + number).slice(-2)
-
-const humanTime = totalSecondes => {
-  const secondes = totalSecondes % 60
-  const minutes = (totalSecondes - secondes) / 60
-  return {
-    minutes,
-    secondes: pad(secondes)
-  }
-}
-
 export default {
   computed: {
     temps () {
-      return humanTime(this.$store.state.time)
+      return this.$store.state.time
     },
     fontSize () {
       return this.$store.state.fontSize + 'em'
