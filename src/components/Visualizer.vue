@@ -32,6 +32,11 @@ export default {
 </script>
 
 <style scoped>
+@font-face {
+   font-family: "noodle";
+   src: url("https://ealhad.github.io/sabli-et/big_noodle_titling.ttf") format("truetype");
+}
+
 main {
   height: 100vh;
   width: 100vw;
@@ -48,7 +53,7 @@ main {
 }
 
 #temps {
-  font-family: bold sans-serif;
+  font-family: "noodle";
   text-shadow: 0 0 3px white;
 }
 
